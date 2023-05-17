@@ -7,7 +7,18 @@ plugins {
     `kotlin-dsl`
 }
 
+group = "com.maikbasel"
+version = "0.1.0-SNAPSHOT"
+java.sourceCompatibility = JavaVersion.VERSION_11
+java.targetCompatibility = JavaVersion.VERSION_11
+
 repositories {
     // Use the plugin portal to apply community plugins in convention plugins.
     gradlePluginPortal()
+}
+dependencies {
+    implementation("com.tngtech.archunit:archunit-junit5:1.0.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+    testImplementation("org.assertj:assertj-core:3.11.1")
 }
